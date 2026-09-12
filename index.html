@@ -1,5 +1,7 @@
 <!doctype html>
 <html lang="tr"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#0f172a">
 <title>Gerilim & Stres Sayacı ❤️</title>
 <style>
 *{box-sizing:border-box}body{margin:0;padding:20px;font-family:Arial,sans-serif;background:linear-gradient(135deg,#fdf2f2,#eadffd);min-height:100vh;display:flex;justify-content:center;align-items:center}
@@ -36,4 +38,11 @@ function add(t){dates();d[t].d++;d[t].m++;d[t].y++;let n=new Date();d.h.unshift(
 function reset(t){if(confirm('Bugünkü sayacı sıfırlamak istediğine emin misin?')){d[t].d=0;save();show()}}
 function show(){dates();gd.textContent=d.g.d;gm.textContent=d.g.m;gy.textContent=d.g.y;sd.textContent=d.s.d;sm.textContent=d.s.m;sy.textContent=d.s.y;list.innerHTML=d.h.length?d.h.map(x=>`<div class="item"><span>${x.t==='g'?'😤 Gerildim':'😵 Stres Oldum'}</span><span>${x.date} - ${x.time}</span></div>`).join(''):'<div class="empty">Henüz kayıt yok.</div>';save()}
 show();
+<script>
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("./service-worker.js");
+  });
+}
+</script>
 </script></body></html>
