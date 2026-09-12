@@ -1,7 +1,8 @@
 {
+  "id": "./?v=2",
   "name": "Gerilim & Stres Sayacı ❤️",
   "short_name": "Stres Sayacı",
-  "start_url": "./",
+  "start_url": "./?v=2",
   "display": "standalone",
   "background_color": "#0f172a",
   "theme_color": "#0f172a",
@@ -9,7 +10,7 @@
   "icons": [
     {
       "src": "icon-v2.png",
-      "sizes": "1024x1024",
+      "sizes": "1536x1536",
       "type": "image/png",
       "purpose": "any"
     }
